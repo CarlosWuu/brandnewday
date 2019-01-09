@@ -1,8 +1,11 @@
 package com.carlos.wuu.brandnewday.entity;
 
+import com.carlos.wuu.brandnewday.enumEntity.AddressTypeEnum;
+import com.carlos.wuu.brandnewday.handler.AddressTypeHandler;
+
 public class User {
     private int id;
-    private String address;
+    private AddressTypeEnum address;
     private String password;
     private String userName;
     private int age;
@@ -15,11 +18,11 @@ public class User {
         this.id = id;
     }
 
-    public String getAddress() {
+    public AddressTypeEnum getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(AddressTypeEnum address) {
         this.address = address;
     }
 
