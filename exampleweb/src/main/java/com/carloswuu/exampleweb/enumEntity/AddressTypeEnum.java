@@ -1,4 +1,4 @@
-package com.carlos.wuu.brandnewday.enumEntity;
+package com.carloswuu.exampleweb.enumEntity;
 
 public enum AddressTypeEnum {
     SHANGHAI(1,"上海"),
@@ -7,7 +7,7 @@ public enum AddressTypeEnum {
     private Integer cityCode;
     private String cityName;
 
-    AddressTypeEnum(Integer cityCode,String cityName){
+    AddressTypeEnum(Integer cityCode, String cityName){
         this.cityCode = cityCode;
         this.cityName = cityName;
     }

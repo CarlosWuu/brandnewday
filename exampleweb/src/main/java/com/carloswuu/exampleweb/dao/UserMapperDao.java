@@ -1,10 +1,11 @@
-package com.carlos.wuu.brandnewday.dao;
+package com.carloswuu.exampleweb.dao;
 
-import com.carlos.wuu.brandnewday.entity.User;
+import com.carloswuu.exampleweb.entity.User;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+
 
 @Repository
 public interface UserMapperDao {

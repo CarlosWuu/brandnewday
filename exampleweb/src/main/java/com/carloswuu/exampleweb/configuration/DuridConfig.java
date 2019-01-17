@@ -1,4 +1,4 @@
-package com.carlos.wuu.brandnewday.configuration;
+package com.carloswuu.exampleweb.configuration;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.slf4j.Logger;

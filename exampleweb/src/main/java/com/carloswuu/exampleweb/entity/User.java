@@ -1,7 +1,6 @@
-package com.carlos.wuu.brandnewday.entity;
+package com.carloswuu.exampleweb.entity;
 
 import com.carlos.wuu.brandnewday.enumEntity.AddressTypeEnum;
-import com.carlos.wuu.brandnewday.handler.AddressTypeHandler;
 
 public class User {
     private int id;

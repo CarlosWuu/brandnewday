@@ -1,4 +1,4 @@
-package com.carlos.wuu.brandnewday.handler;
+package com.carloswuu.exampleweb.handler;
 
 import com.carlos.wuu.brandnewday.enumEntity.AddressTypeEnum;
 import org.apache.ibatis.type.BaseTypeHandler;

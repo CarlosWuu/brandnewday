@@ -1,4 +1,4 @@
-package com.carlos.wuu.brandnewday.configuration;
+package com.carloswuu.exampleweb.configuration;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 import org.springframework.cache.CacheManager;
