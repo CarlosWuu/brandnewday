@@ -1,0 +1,23 @@
+package com.carloswuu.consulclient.consulclient.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+public class HelloController {
+    @Autowired
+    private LoadBalancerClient loadBalancerClient;
+
+    @RequestMapping("/call")
+    public String call(){
+        ServiceInstance serviceInstance = loadBalancerClient.choose("service-producer");
+        System.out.println("服务器地址:"+serviceInstance.getUri());
+        System.out.println("服务名："+serviceInstance.getServiceId());
+
+        return new RestTemplate().getForObject(serviceInstance.getUri().toString()+"/hello",String.class);
+    }
+}

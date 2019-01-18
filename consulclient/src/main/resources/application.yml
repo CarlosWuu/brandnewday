@@ -1,9 +1,11 @@
 spring:
   application:
-    name: consulServer1
+    name: consulClient
   cloud:
     consul:
       host: localhost
       port: 8500
       discovery:
-        service-name: service-producer
+        register: true
+server:
+  port: 8111

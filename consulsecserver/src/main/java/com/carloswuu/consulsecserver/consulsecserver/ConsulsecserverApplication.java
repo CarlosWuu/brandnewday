@@ -1,4 +1,4 @@
-package com.carloswuu.consulserver.consulserver;
+package com.carloswuu.consulsecserver.consulsecserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 @EnableDiscoveryClient
-public class ConsulserverApplication {
+public class ConsulsecserverApplication {
     @RequestMapping("/hello")
     public String home() {
-        return "Hello world";
+        return "Hello secWorld";
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsulserverApplication.class, args);
+        SpringApplication.run(ConsulsecserverApplication.class, args);
     }
 
 }

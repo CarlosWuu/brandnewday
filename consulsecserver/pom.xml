@@ -8,10 +8,10 @@
         <version>2.1.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.carloswuu.consulserver</groupId>
-    <artifactId>consulserver</artifactId>
+    <groupId>com.carloswuu.consulsecserver</groupId>
+    <artifactId>consulsecserver</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>consulserver</name>
+    <name>consulsecserver</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -21,13 +21,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
 
         <dependency>
