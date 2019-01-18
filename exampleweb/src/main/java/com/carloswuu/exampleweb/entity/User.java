@@ -1,6 +1,7 @@
 package com.carloswuu.exampleweb.entity;
 
-import com.carlos.wuu.brandnewday.enumEntity.AddressTypeEnum;
+
+import com.carloswuu.exampleweb.enumEntity.AddressTypeEnum;
 
 public class User {
     private int id;

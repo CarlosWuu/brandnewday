@@ -1,6 +1,6 @@
 package com.carloswuu.exampleweb.handler;
 
-import com.carlos.wuu.brandnewday.enumEntity.AddressTypeEnum;
+import com.carloswuu.exampleweb.enumEntity.AddressTypeEnum;
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
 
