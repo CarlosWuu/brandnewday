@@ -1,23 +1,24 @@
 package com.carloswuu.consulclient.consulclient.controller;
 
+import com.carloswuu.consulclient.consulclient.service.HelloService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class HelloController {
+    private Logger logger = LoggerFactory.getLogger(HelloController.class);
+
     @Autowired
-    private LoadBalancerClient loadBalancerClient;
+    private HelloService helloService;
 
     @RequestMapping("/call")
     public String call(){
-        ServiceInstance serviceInstance = loadBalancerClient.choose("service-producer");
-        System.out.println("服务器地址:"+serviceInstance.getUri());
-        System.out.println("服务名："+serviceInstance.getServiceId());
 
-        return new RestTemplate().getForObject(serviceInstance.getUri().toString()+"/hello",String.class);
+        logger.info("hitting hello");
+
+        return helloService.hello();
     }
 }
