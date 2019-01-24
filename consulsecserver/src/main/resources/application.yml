@@ -9,5 +9,13 @@ spring:
         service-name: service-producer
   zipkin:
     base-url: http://localhost:9411
+    service:
+      name: consulSecServer
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0
 server:
   port: 8112
