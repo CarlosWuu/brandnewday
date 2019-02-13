@@ -1,0 +1,24 @@
+zuul:
+  routes:
+    consulServer:
+      path: /test/**
+      serviceId: service-producer
+server:
+  port: 8383
+spring:
+  cloud:
+    consul:
+      discovery:
+        instance-id: zuulTest
+        prefer-ip-address: true
+        health-check-interval: 10s
+        hostname: ${spring.application.name}
+        service-name: ${spring.application.name}
+        enabled: true
+      host: localhost
+      port: 8500
+  application:
+    name: zuulTest
+ribbon:
+  ReadTimeout: 3000
+  ConnectionTimeout: 3000
