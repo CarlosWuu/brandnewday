@@ -3,8 +3,26 @@ package com.carloswuu.exampleweb.utils;
 import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
+import org.apache.http.HttpEntity;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class SSHUtil {
     private String ip;
@@ -64,10 +82,7 @@ public class SSHUtil {
 
     }
 
-    public static void main(String[] args) {
-        SSHUtil ssh = new SSHUtil("10.135.66.103","appuser","MaxusTest2020_");
 
-        ssh.execute("cd /app \n ls");
-    }
+
 
 }

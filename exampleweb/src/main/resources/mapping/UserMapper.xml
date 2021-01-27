@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.carlos.wuu.brandnewday.dao.UserMapperDao" >
-    <resultMap id="BaseResultMap" type="com.carlos.wuu.brandnewday.entity.User" >
+<mapper namespace="com.carloswuu.exampleweb.dao.UserMapperDao" >
+    <resultMap id="BaseResultMap" type="com.carloswuu.exampleweb.entity.User" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="user_name" property="userName" jdbcType="VARCHAR" />
         <result column="password" property="password" jdbcType="VARCHAR" />
-        <result column="address" property="address" jdbcType="VARCHAR" typeHandler="com.carlos.wuu.brandnewday.handler.AddressTypeHandler"/>
+        <result column="address" property="address" jdbcType="VARCHAR" typeHandler="com.carloswuu.exampleweb.handler.AddressTypeHandler"/>
         <result column="age" property="age" jdbcType="INTEGER" />
 
     </resultMap>
     <select id="selectUsers" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
         select * from user
     </select>
+
+    <insert id="insert" parameterType="com.carloswuu.exampleweb.entity.UserScoreEntity">
+        insert into user_score(user_id,score) values (#{userId,jdbcType=INTEGER},#{score,jdbcType=INTEGER})
+    </insert>
 </mapper>

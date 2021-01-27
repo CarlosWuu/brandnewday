@@ -3,9 +3,10 @@ spring:
     name: consulClient
   cloud:
     consul:
-      host: localhost
+      host: 10.135.80.83
       port: 8500
       discovery:
         register: false
+        acl-token: 02810ae1-404f-fd92-c634-d8c22d2d1ba0
 server:
   port: 8111

@@ -5,13 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.1.RELEASE</version>
+        <version>2.2.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.carlos.wuu</groupId>
     <artifactId>brandnewday</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>brandnewday</name>
+
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -22,6 +23,12 @@
 
     <modules>
         <module>exampleweb</module>
+        <module>mqdemo</module>
+        <module>backendserver</module>
+        <module>consulclient</module>
+        <module>consulsecserver</module>
+        <module>consulserver</module>
+        <module>zuuldemo</module>
     </modules>
     <packaging>pom</packaging>
 
