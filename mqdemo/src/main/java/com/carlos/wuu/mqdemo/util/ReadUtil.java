@@ -6,6 +6,6 @@ package com.carlos.wuu.mqdemo.util;
  */
 public class ReadUtil {
     public void print(){
-        System.out.println("hello");
+        System.out.println("hello world");
     }
 }
