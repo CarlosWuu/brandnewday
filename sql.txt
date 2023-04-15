@@ -1,0 +1,62 @@
+
+select * from TL_PART_STOCK_FLOW_ITEM where 	order_no='ARO23040044' and asc_code=	'4108025' order by part_code;
+select * from TT_REPAIR_ORDER where RO_NO='ARO23040044' and asc_code='4108025';
+select * from TT_RO_REPAIR_PARTS where RO_NO='ARO23040044' and asc_code='4108025';
+
+select * from TM_PART_STOCK where asc_code='4117030' and part_no='C00197717'
+
+
+select * from TL_PART_STOCK_FLOW_ITEM where order_no='R4122098023040018'
+select * from TT_XYX_PART_ORDER where order_no='R4122098023040018'
+
+select  *from TM_ASC_STOREHOUSE where id=10000000174455
+
+select * From TM_PART_STOCK where STORAGE_POSITION='A3-1-02' and part_no='C00013517' and asc_code='4120013'
+
+select a.sender,a.receiver,a.create_by ,a.* from tt_ro_repair_parts a where a.asc_code = '4108025' order by a.create_date desc ;
+
+INSERT INTO TT_RO_REPAIR_PARTS VALUE
+(SELECT SEQ_RO_REPAIR_PARTS.NEXTVAL,
+'APD23040109',
+'ARO23040044',
+'0',
+(SELECT TM.STORAGE_CODE
+FROM tm_storage TM
+WHERE B.STORAGE_ID = TM.STORAGE_ID),
+'0',
+(SELECT T.STOREHOUSE_CODE
+FROM TM_ASC_STOREHOUSE T
+WHERE B.STOREHOUSE_ID = T.ID),
+PART_CODE,
+PART_NAME,
+-QUANTITY,
+'',
+'3',-- 价格类型
+'1',
+B.CURRENT_SALE_PRICE,
+B.COST_PRICE,
+B.CURRENT_SALE_PRICE,
+-QUANTITY * B.COST_PRICE,
+-QUANTITY * B.CURRENT_SALE_PRICE,
+'0003', --发料人
+'0014',--领料人
+SYSDATE,
+'',-- 免费标识
+'1',
+'1',-- 批次
+'0',
+'0',
+'39678',
+B.CREATE_DATE,--TMP
+'',
+'',
+ABS(QUANTITY),-- 需求数量
+ 
+B.ASC_CODE,
+'',
+'',
+'0'
+FROM TL_PART_STOCK_FLOW_ITEM B
+WHERE B.ORDER_NO = 'ARO23040044'
+AND ASC_CODE = '4108025'
+);
